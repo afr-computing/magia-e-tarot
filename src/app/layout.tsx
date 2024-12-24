@@ -4,7 +4,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 
 import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
-import getConfig from "next/config";
+import { getConfig } from "@/app/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
