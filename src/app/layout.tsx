@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
@@ -32,6 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+      <noscript>
+        <iframe src={`https://www.googletagmanager.com/ns.html?id=${analyticsId}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+        </iframe>
+      </noscript>
         {children}
         <WhatsappFloatingbutton />
       </body>
