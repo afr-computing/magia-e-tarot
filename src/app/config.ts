@@ -7,6 +7,5 @@ export interface Config {
 export const getConfig = (): Config => {
   return {
     analyticsId: process.env.ANALYTICS_ID || '',
-    test: process.env.TEST || ''
   }
 };
