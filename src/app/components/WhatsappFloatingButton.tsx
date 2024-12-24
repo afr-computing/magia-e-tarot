@@ -1,3 +1,4 @@
+'use client';
 import { sendGTMEvent } from "@next/third-parties/google";
 import { FaWhatsapp } from "react-icons/fa";
 
