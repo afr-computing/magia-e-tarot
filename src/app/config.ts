@@ -1,7 +1,6 @@
 
 export interface Config {
   analyticsId: string;
-  test: string;
 }
 
 export const getConfig = (): Config => {
