@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
+import getConfig from "next/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +25,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { analyticsId } = getConfig();
+
   return (
     <html lang="en">
       <body
@@ -30,6 +35,7 @@ export default function RootLayout({
         {children}
         <WhatsappFloatingbutton />
       </body>
+      <GoogleAnalytics gaId={analyticsId} />
     </html>
   );
 }
