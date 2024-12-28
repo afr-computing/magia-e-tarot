@@ -88,7 +88,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-5xl font-semibold tracking-tight text-white lg:text-7xl">Magia e Tarot</h2>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8">Respostas claras para um futuro melhor.</p>
+            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8">Clareza para a sua alma, poder para a sua vida</p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white lg:grid-cols-2 md:flex lg:gap-x-10">
