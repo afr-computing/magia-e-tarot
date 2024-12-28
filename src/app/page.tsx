@@ -1,7 +1,7 @@
 'use client'
 
 import { MESSAGE, PHONE_NUMBER } from "@/app/constants";
-import { Carousel, Typography } from "@material-tailwind/react";
+import { Button, Carousel, Typography } from "@material-tailwind/react";
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from "react";
@@ -25,7 +25,7 @@ export default function Home() {
     <div>
       <div className="hidden md:fixed md:flex md:items-center md:gap-x-12 top-0 z-10 p-4" style={{left: '50%', transform: 'translate(-50%)'}}>
         {navigation.map((item) => (
-          <a key={item.name} href={item.href} className="text-base font-semibold text-white" onClick={item.onClick}>
+          <a key={item.name} href={item.href} className="text-base font-semibold text-white" onClick={item.on}>
             {item.name}
           </a>
         ))}
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center mt-8">
-            <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-indigo-500 text-white shadow-md shadow-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" onClick={onClickSchedule}>Agendar consulta</button>
+            <Button color="indigo" onClick={onClickSchedule}>Agendar consulta</Button>
           </div>
         </div>
         </div>
