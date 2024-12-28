@@ -25,7 +25,7 @@ export default function Home() {
     <div>
       <div className="hidden md:fixed md:flex md:items-center md:gap-x-12 top-0 z-10 p-4" style={{left: '50%', transform: 'translate(-50%)'}}>
         {navigation.map((item) => (
-          <a key={item.name} href={item.href} className="text-base font-semibold text-white" onClick={item.on}>
+          <a key={item.name} href={item.href} className="text-base font-semibold text-white" onClick={item.onClick}>
             {item.name}
           </a>
         ))}
