@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-indigo-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-indigo-900 px-6 py-6 lg:max-w-sm lg:ring-1 lg:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Magia e Tarot</span>
@@ -82,16 +82,16 @@ export default function Home() {
             </div>
           </DialogPanel>
         </Dialog>
-      <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 h-[100vh] flex items-center justify-center">
+      <div className="relative isolate overflow-hidden bg-gray-900 py-24 lg:py-32 h-[100vh] flex lg:items-center justify-center">
         <img src="hero.jpg" alt="hero" className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-30" />
         <div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Magia e Tarot</h2>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Respostas claras para um futuro melhor.</p>
+            <h2 className="text-5xl font-semibold tracking-tight text-white lg:text-7xl">Magia e Tarot</h2>
+            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8">Respostas claras para um futuro melhor.</p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white lg:grid-cols-2 md:flex lg:gap-x-10">
               <a href="#">Testemunhos <span aria-hidden="true">&rarr;</span></a>
               <a href="#">Sobre <span aria-hidden="true">&rarr;</span></a>
               <a href="#">Trabalhos <span aria-hidden="true">&rarr;</span></a>
