@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GoogleTagManager } from '@next/third-parties/google'
 
 import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
@@ -39,7 +38,6 @@ export default function RootLayout({
         {children}
         <WhatsappFloatingbutton />
       </body>
-      <GoogleTagManager gtmId={analyticsId} />
     </html>
   );
 }

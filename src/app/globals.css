@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   color: #e4e4e7;
-  background: #312e81;
   font-family: Arial, Helvetica, sans-serif;
 }
