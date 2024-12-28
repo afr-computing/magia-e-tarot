@@ -16,14 +16,14 @@ export const HeaderMenu = () => {
 
   return (
     <>
-      <div className="hidden md:fixed md:flex md:items-center md:gap-x-12 top-0 z-10 p-4" style={{ left: '50%', transform: 'translate(-50%)' }}>
+      <div className="hidden lg:fixed lg:flex lg:items-center lg:gap-x-12 top-0 z-10 p-6 w-full lg:justify-center">
         {navigation.map((item) => (
           <a key={item.name} href={item.href} className="text-base font-semibold text-white" onClick={item.onClick}>
             {item.name}
           </a>
         ))}
       </div>
-      <div className="fixed md:hidden z-10 p-6 flex w-full justify-end">
+      <div className="fixed lg:hidden z-10 p-6 flex w-full justify-end">
         <button
           type="button"
           onClick={() => setMobileMenuOpen(true)}
