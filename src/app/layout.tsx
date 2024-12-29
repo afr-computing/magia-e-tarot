@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
 import { getConfig } from "@/app/config";
+import { ScrollToTopFloatingButton } from "@/app/components/ScrollToTopFloatingButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,10 @@ export default function RootLayout({
         </iframe>
       </noscript>
         {children}
-        <WhatsappFloatingbutton />
+        <div className="fixed right-[24px] bottom-[16px] flex flex-col gap-[14px]">
+          <ScrollToTopFloatingButton />
+          <WhatsappFloatingbutton />
+        </div>
       </body>
     </html>
   );
