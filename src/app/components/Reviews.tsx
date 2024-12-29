@@ -2,7 +2,7 @@ import { Carousel, Typography } from "@material-tailwind/react"
 
 export const Reviews = () => {
   return (
-    <div id="testemunhos" className="h-[100vh]">
+    <div id="testemunhos" className="h-[100dvh]">
     <Carousel >
       <div className="relative h-full w-full">
         <img

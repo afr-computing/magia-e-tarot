@@ -6,7 +6,7 @@ export const Hero = () => {
     window.open(`https://wa.me/${PHONE_NUMBER}?text=${MESSAGE}`, '_blank');
   };
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-24 lg:py-32 h-[100vh] flex lg:items-center justify-center">
+    <div className="relative isolate overflow-hidden bg-gray-900 py-24 lg:py-32 h-[100dvh] flex lg:items-center justify-center">
       <img src="hero-proposal-1.jpeg" alt="hero" className="absolute inset-0 -z-10 size-full object-left object-cover lg:object-top opacity-30" />
       <div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
