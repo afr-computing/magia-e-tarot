@@ -1,12 +1,16 @@
 import { Carousel, Typography } from "@material-tailwind/react"
+import Witness1 from '@/assets/witness1.jpg';
+import Witness2 from '@/assets/witness2.jpg';
+import Witness3 from '@/assets/witness3.jpg';
+import Image from "next/image";
 
 export const Reviews = () => {
   return (
     <div id="testemunhos" className="h-[100vh]">
-    <Carousel >
+    <Carousel loop autoplay autoplayDelay={20000}>
       <div className="relative h-full w-full">
-        <img
-          src="witness1.jpg"
+        <Image
+          src={Witness1}
           alt="image 1"
           className="h-full w-full object-cover"
         />
@@ -23,8 +27,8 @@ export const Reviews = () => {
         </div>
       </div>
       <div className="relative h-full w-full">
-        <img
-          src="witness2.jpg"
+        <Image
+          src={Witness2}
           alt="image 2"
           className="h-full w-full object-cover"
         />
@@ -41,8 +45,8 @@ export const Reviews = () => {
         </div>
       </div>
       <div className="relative h-full w-full">
-        <img
-          src="witness3.jpg"
+        <Image
+          src={Witness3}
           alt="image 3"
           className="h-full w-full object-cover"
         />

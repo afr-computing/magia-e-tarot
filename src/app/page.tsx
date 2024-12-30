@@ -7,10 +7,11 @@ import { Reviews } from "@/app/components/Reviews";
 export default function Home() {
 
   return (
-    <div>
+    <main>
       <HeaderMenu />
       <Hero />
+      {/* <About /> */}
       <Reviews />
-    </div>
+    </main>
   );
 }
