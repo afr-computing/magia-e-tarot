@@ -14,7 +14,7 @@ export const Hero = () => {
       <div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-5xl font-semibold tracking-tight text-white lg:text-7xl text-center">Magia e Tarot</h2>
+            <h1 className="text-5xl font-semibold tracking-tight text-white lg:text-7xl text-center">Magia e Tarot</h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8 text-center">Clareza para a sua alma, poder para a sua vida</p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
