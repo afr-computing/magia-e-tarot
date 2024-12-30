@@ -28,7 +28,7 @@ export default function RootLayout({
   const { analyticsId } = getConfig();
 
   return (
-    <html lang="en">
+    <html lang="pt">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
