@@ -1,5 +1,6 @@
 'use client'
 
+import { Footer } from "@/app/components/Footer";
 import { HeaderMenu } from "@/app/components/HeaderMenu";
 import { Hero } from "@/app/components/Hero";
 import { Reviews } from "@/app/components/Reviews";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       {/* <About /> */}
       <Reviews />
+      <Footer />
     </main>
   );
 }
