@@ -18,6 +18,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Magia e Tarot",
+  description: 'Clareza para a sua alma, poder para a sua vida',
+  openGraph: {
+    title: "Magia e Tarot",
+    description: 'Clareza para a sua alma, poder para a sua vida',
+    url: "https://magia-e-tarot.com",
+    type: "website",
+    siteName: "Magia e Tarot"
+  }
+
 };
 
 export default function RootLayout({
