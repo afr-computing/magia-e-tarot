@@ -72,7 +72,7 @@ function RenderParagraphs({ text }: {text: string}) {
 
 const CardList = () => {
   return (
-    <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
+    <div className="grid grid-cols-1 gap-12 md:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
     {works.map(({ id, name, description, src }) => {
       return (
         <Card key={id}>
