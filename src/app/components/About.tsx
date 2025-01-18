@@ -26,10 +26,10 @@ const carouselImages = [
 
 export const About = () => {
   return (
-    <div id="about" className="relative isolate min-h-[100vh] relative isolate overflow-hidden bg-gray-900 py-24 lg:py-32">
-      <Image src={AboutPic} alt="hero" className="absolute inset-0 -z-10 size-full object-[-50px] object-cover lg:object-top opacity-30" />
-      <div className="md:text-center text-pretty leading-relaxed md:px-16 py-32 flex items-center gap-6 flex-col md:flex-row">
-        <div className="px-14 md:px-32">
+    <div id="about" className="relative isolate min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
+      <Image src={AboutPic} alt="hero" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-top opacity-30" />
+      <div className="md:text-center text-pretty leading-relaxed md:px-16 py-64 px-12 flex items-center gap-6 flex-col md:flex-row flex-wrap">
+        <div className="max-w-[900px]">
           <h1 className="text-3xl md:text-5xl font-bold text-center mb-12">
             Tarólogo vidente pai José de Ogum
           </h1>
@@ -49,9 +49,9 @@ export const About = () => {
             Vamos reescrever a sua vida através de uma consulta presencial ou online para qualquer parte do mundo.
           </p>
         </div>
-        <Carousel loop autoplay autoplayDelay={5000}>
+        <Carousel loop autoplay autoplayDelay={5000} className="flex-1">
           {carouselImages.map(({ id, src, alt }) => {
-            return <Image key={id} src={src} alt={alt} className="max-h-[300px] max-w-[300px] md:max-h-[600px] md:max-w-[600px] mx-auto rounded-lg shadow-lg shadow-xl" />
+            return <Image key={id} src={src} alt={alt} className="md:max-h-[600px] md:max-w-[600px] mx-auto rounded-lg shadow-lg shadow-xl" />
           })}
         </Carousel>
       </div>
