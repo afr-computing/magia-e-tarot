@@ -27,9 +27,9 @@ const carouselImages = [
 export const About = () => {
   return (
     <div id="about" className="relative isolate min-h-[100vh] relative isolate overflow-hidden bg-gray-900 py-24 lg:py-32">
-      <Image src={AboutPic} alt="hero" className="absolute inset-0 -z-10 size-full object-left object-cover lg:object-top opacity-30" />
+      <Image src={AboutPic} alt="hero" className="absolute inset-0 -z-10 size-full object-top object-cover lg:object-top opacity-30" />
       <div className="md:text-center text-pretty leading-relaxed md:px-16 py-32 flex items-center gap-6 flex-col md:flex-row">
-        <div className="px-24 md:px-32">
+        <div className="px-14 md:px-32">
           <h1 className="text-3xl md:text-5xl font-bold text-center mb-12">
             Tarólogo vidente pai José de Ogum
           </h1>
