@@ -4,6 +4,7 @@ import WorkPic from '@/assets/works.jpeg';
 import AmarracaoAmorosa1 from '@/assets/amarracao-amorosa1.jpeg';
 import AmarracaoAmorosa2 from '@/assets/amarracao-amorosa2.jpeg';
 import AmarracaoAmorosa3 from '@/assets/amarracao-amorosa3.jpeg';
+import AberturaCaminhos1 from '@/assets/abertura-caminhos1.jpeg';
 
 const works = [
   {
@@ -26,6 +27,7 @@ Limpeza de ambientes para eliminar energias negativas da sua casa, escritório, 
     name: "Abertura de Caminhos",
     description: `Trabalho realizado para qualquer campo da sua vida seja financeiro, prosperidade, amor, trabalho, entre outros.\n
 Removo obstáculos e bloqueios, auxiliando a criar condições propícias para que alcance os seus objetivos.`,
+    src: [AberturaCaminhos1, WorkPic]
   },
   {
     id: 5,
@@ -79,7 +81,7 @@ const CardList = () => {
               {src.map((img, index) => {
                 return (
                   <CardHeader key={index} className="aspect-square mx-2">
-                    <Image src={img} alt={`${name}-${index}`} />
+                    <Image src={img} alt={`${name}-${index}`} className="h-full object-cover object-top"/>
                   </CardHeader>
                 )
               })}
