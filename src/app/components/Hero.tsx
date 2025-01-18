@@ -9,7 +9,7 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-24 lg:py-32 h-[100vh] flex lg:items-center justify-center">
+    <div className="relative isolate overflow-hidden bg-gray-900 py-32 h-[100vh] flex lg:items-center justify-center">
       <Image src={HeroImage} alt="hero" className="absolute inset-0 -z-10 size-full object-center object-cover lg:object-top opacity-30" />
       <div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
