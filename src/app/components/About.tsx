@@ -26,10 +26,10 @@ const carouselImages = [
 
 export const About = () => {
   return (
-    <div id="about" className="relative isolate min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
-      <Image src={AboutPic} alt="hero" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-top opacity-30" />
+    <div id="about" className="relative isolate min-h-[100vh] overflow-hidden bg-gray-900">
+      <Image src={AboutPic} alt="about" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-top opacity-20" />
       <div className="md:text-center text-pretty leading-relaxed px-6 md:px-8 py-64 flex items-center gap-6 flex-col md:flex-row flex-wrap">
-        <div className="max-w-[900px]">
+        <div className="flex-1">
           <h1 className="text-3xl md:text-5xl font-bold text-center mb-12">
             Tarólogo vidente pai José de Ogum
           </h1>
@@ -49,7 +49,7 @@ export const About = () => {
             Vamos reescrever a sua vida através de uma consulta presencial ou online para qualquer parte do mundo.
           </p>
         </div>
-        <Carousel loop autoplay autoplayDelay={5000} className="flex-1">
+        <Carousel loop autoplay autoplayDelay={5000} className="max-w-[800px]">
           {carouselImages.map(({ id, src, alt }) => {
             return <Image key={id} src={src} alt={alt} className="md:max-h-[600px] md:max-w-[600px] mx-auto rounded-lg shadow-lg shadow-xl" />
           })}
