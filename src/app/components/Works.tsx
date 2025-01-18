@@ -57,7 +57,7 @@ export const Works = () => {
   return (
     <div id="trabalhos" className="min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
       <Image src={WorkPic} alt="work" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-center opacity-20" />
-      <div className="py-32 px-6 md:px-8">
+      <div className="py-32 md:py-36 px-6 md:px-8">
         <h2 className=" text-center text-3xl md:text-5xl font-bold">Trabalhos</h2>
         <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
           {works.map(({ id, name, description }) => {
