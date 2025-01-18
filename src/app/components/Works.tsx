@@ -78,7 +78,7 @@ const CardList = () => {
             <div className="grid grid-cols-3">
               {src.map((img, index) => {
                 return (
-                  <CardHeader key={index} className="max-w-56 aspect-square">
+                  <CardHeader key={index} className="aspect-square mx-2">
                     <Image src={img} alt={`${name}-${index}`} />
                   </CardHeader>
                 )
