@@ -64,7 +64,7 @@ export const Works = () => {
             return (
               <Card key={id}>
                 <CardBody>
-                  <h2 className="font-bold text-xl">{name}</h2>
+                  <h2 className="font-bold text-xl text-center mb-2">{name}</h2>
                   <p className="text-justify text-lg">
                     {description}
                   </p>
