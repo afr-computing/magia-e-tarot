@@ -1,4 +1,5 @@
 'use client'
+import { useIsScroll } from '@/app/hooks/use-is-scroll';
 import { Dialog, DialogPanel, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Fragment, useState } from 'react';
@@ -13,17 +14,18 @@ const navigation = [
 
 export const HeaderMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const isScroll = useIsScroll();
 
   return (
     <>
-      <div className="hidden lg:fixed lg:flex lg:items-center lg:gap-x-12 top-0 z-10 p-6 w-full lg:justify-center">
+      <div className={`hidden lg:fixed lg:flex lg:items-center lg:gap-x-12 top-0 z-10 p-6 w-full lg:justify-center ${isScroll ? 'bg-gray-900' : ''}`}>
         {navigation.map((item) => (
           <a key={item.name} href={item.href} className="text-base font-semibold text-white" onClick={item.onClick}>
             {item.name}
           </a>
         ))}
       </div>
-      <div className="fixed lg:hidden z-10 p-6 flex w-full justify-end">
+      <div className={`fixed lg:hidden z-10 p-6 flex w-full justify-end ${isScroll ? 'bg-gray-900' : ''}`}>
         <button
           type="button"
           onClick={() => setMobileMenuOpen(true)}

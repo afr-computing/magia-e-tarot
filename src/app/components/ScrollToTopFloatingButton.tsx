@@ -1,26 +1,14 @@
 'use client'
+import { useIsScroll } from "@/app/hooks/use-is-scroll";
 import { Button } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
 import { FaChevronUp } from "react-icons/fa";
 
 export const ScrollToTopFloatingButton = () => {
-  const [showButton, setShowButton] = useState(false);
+  const isScroll = useIsScroll();
   const onClick = () => {
     window.scrollTo(0, 0);
   }
-
-  const listenToScroll = () => {
-    setShowButton(window.scrollY > 10);
-    console.log(window.scrollY);
-  }
-  useEffect(() => {
-    window.addEventListener('scroll', listenToScroll);
-
-    return () => {
-      window.removeEventListener('scroll', listenToScroll);
-    };
-  }, []);
-  if (!showButton) {
+  if (!isScroll) {
     return null;
   }
 
