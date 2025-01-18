@@ -9,34 +9,28 @@ const works = [
   {
     id: 1,
     name: 'Amarração Amorosa',
-    description: `Poderoso trabalho espiritual infalível realizado com a intenção de atrair e unir duas pessoas, fortalecendo o amor.
-
-Proteger o amor contra inveja, ciúme ou traição.
-
-Existe dedicação e empenho para harmonizar a energia do casal, a fim de promover uma conexão genuína tendo como pilar o respeito, amor e equilíbrio.
-
+    description: `Poderoso trabalho espiritual infalível realizado com a intenção de atrair e unir duas pessoas, fortalecendo o amor.\n
+Proteger o amor contra inveja, ciúme ou traição.\n
+Existe dedicação e empenho para harmonizar a energia do casal, a fim de promover uma conexão genuína tendo como pilar o respeito, amor e equilíbrio.\n
 Realizo este trabalho com respeito e dedicação independentemente da orientação sexual.`,
     src: [AmarracaoAmorosa1, AmarracaoAmorosa2, AmarracaoAmorosa3]
   },
   {
     id: 2,
     name: "Limpeza Espiritual",
-    description: `Trabalho com intuito de remoção de energias negativas, espirituais e psíquicas em qualquer campo da vida, fortalecendo a conexão com a espiritualidade e promove uma vida mais leve e harmoniosa.
-
+    description: `Trabalho com intuito de remoção de energias negativas, espirituais e psíquicas em qualquer campo da vida, fortalecendo a conexão com a espiritualidade e promove uma vida mais leve e harmoniosa.\n
 Limpeza de ambientes para eliminar energias negativas da sua casa, escritório, local de trabalho outro sitio que seja necessário.`
   },
   {
     id: 4,
     name: "Abertura de Caminhos",
-    description: `Trabalho realizado para qualquer campo da sua vida seja financeiro, prosperidade, amor, trabalho, entre outros.
-
+    description: `Trabalho realizado para qualquer campo da sua vida seja financeiro, prosperidade, amor, trabalho, entre outros.\n
 Removo obstáculos e bloqueios, auxiliando a criar condições propícias para que alcance os seus objetivos.`,
   },
   {
     id: 5,
     name: "Fertilidade",
-    description: `Trabalho espiritual, físico, psicológico e emocional desenvolvido para ajudar o casal a engravidar.
-
+    description: `Trabalho espiritual, físico, psicológico e emocional desenvolvido para ajudar o casal a engravidar.\n
 Já ajudei vários casais a conquistarem este presente de Deus que é ter um bebé.`
   },
   {
@@ -47,8 +41,7 @@ Já ajudei vários casais a conquistarem este presente de Deus que é ter um beb
   {
     id: 7,
     name: "Corte de Rival",
-    description: `Trabalho realizado para afastar rival de qualquer campo da sua vida.
-
+    description: `Trabalho realizado para afastar rival de qualquer campo da sua vida.\n
 Afasta invejosos, pessoas que querem o seu mal, amantes ou pessoas interessadas no seu parceiro.`
   },
   {
@@ -58,6 +51,22 @@ Afasta invejosos, pessoas que querem o seu mal, amantes ou pessoas interessadas 
   },
 ]
 
+
+
+
+function RenderParagraphs({ text }: {text: string}) {
+  const paragraphs = text.split(/\n\s*\n/);
+
+  return (
+    <div>
+      {paragraphs.map((paragraph, index) => (
+        <p key={index} className="mb-4">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+  );
+}
 
 const CardList = () => {
   return (
@@ -78,9 +87,9 @@ const CardList = () => {
           )}
           <CardBody>
             <h2 className="font-bold text-lg md:text-xl text-center mb-2">{name}</h2>
-            <p className="text-md md:text-lg">
-              {description}
-            </p>
+            <div className="text-md md:text-lg">
+              <RenderParagraphs text={description} />
+            </div>
           </CardBody>
         </Card>
       );
