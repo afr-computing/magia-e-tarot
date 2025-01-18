@@ -60,7 +60,7 @@ export const About = () => {
             })}
           </Carousel>
         </div>
-        <p className="mt-12 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8 text-center">Clareza para a sua alma, poder para a sua vida</p>
+        <p className="mt-12 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8 text-center px-6 md:px-8 ">Clareza para a sua alma, poder para a sua vida</p>
         <div className="flex justify-center mt-8">
           <Button className="bg-[#25d366]" variant="filled" onClick={onClickSchedule}>Agendar consulta</Button>
         </div>
