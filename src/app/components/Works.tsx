@@ -57,37 +57,45 @@ Afasta invejosos, pessoas que querem o seu mal, amantes ou pessoas interessadas 
     description: `Se você for vítima de algum trabalho de magia ou praga espiritual entre em contacto comigo para desfazermos na hora.`
   },
 ]
+
+
+const CardList = () => {
+  return (
+    <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
+    {works.map(({ id, name, description, src }) => {
+      return (
+        <Card key={id}>
+          {src && (
+            <div className="grid grid-cols-3">
+              {src.map((img, index) => {
+                return (
+                  <CardHeader key={index} className="max-w-56 aspect-square">
+                    <Image src={img} alt={`${name}-${index}`} />
+                  </CardHeader>
+                )
+              })}
+            </div>
+          )}
+          <CardBody>
+            <h2 className="font-bold text-lg md:text-xl text-center mb-2">{name}</h2>
+            <p className="text-md md:text-lg">
+              {description}
+            </p>
+          </CardBody>
+        </Card>
+      );
+    })}
+  </div>
+  )
+};
+
 export const Works = () => {
   return (
     <div id="trabalhos" className="min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
       <Image src={WorkPic} alt="work" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-center opacity-30" />
       <div className="py-32 md:py-36 px-6 md:px-8">
         <h2 className=" text-center text-3xl md:text-5xl font-bold">Trabalhos</h2>
-        <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
-          {works.map(({ id, name, description, src }) => {
-            return (
-              <Card key={id}>
-                {src && (
-                  <div className="grid grid-cols-3">
-                    {src.map((img, index) => {
-                      return (
-                        <CardHeader key={index} className="max-w-48 aspect-square">
-                          <Image src={img} alt={`${name}-${index}`} />
-                        </CardHeader>
-                      )
-                    })}
-                  </div>
-                )}
-                <CardBody>
-                  <h2 className="font-bold text-xl text-center mb-2">{name}</h2>
-                  <p className="text-justify text-lg">
-                    {description}
-                  </p>
-                </CardBody>
-              </Card>
-            );
-          })}
-        </div>
+        <CardList />
       </div>
     </div>
   )
