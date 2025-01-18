@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardHeader } from "@material-tailwind/react"
+import { Card, CardBody, CardHeader } from "@material-tailwind/react"
 import Image from "next/image";
 import WorkPic from '@/assets/works.jpeg';
 import AmarracaoAmorosa1 from '@/assets/amarracao-amorosa1.jpeg';
@@ -6,7 +6,6 @@ import AmarracaoAmorosa2 from '@/assets/amarracao-amorosa2.jpeg';
 import AmarracaoAmorosa3 from '@/assets/amarracao-amorosa3.jpeg';
 import AberturaCaminhos1 from '@/assets/abertura-caminhos1.jpeg';
 import HeroImage from '@/assets/trabalho.jpeg';
-import { MESSAGE, PHONE_NUMBER } from "@/app/constants";
 
 const works = [
   {
@@ -104,19 +103,12 @@ const CardList = () => {
 
 export const Works = () => {
 
-  const onClickSchedule = () => {
-    window.open(`https://wa.me/${PHONE_NUMBER}?text=${MESSAGE}`, '_blank');
-  };
-
   return (
     <div id="trabalhos" className="min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
       <Image src={HeroImage} alt="work" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-top  opacity-30" />
       <div className="py-32 md:py-36 px-6 md:px-8">
         <h2 className=" text-center text-3xl md:text-5xl font-bold">Trabalhos</h2>
         <CardList />
-        <div className="flex justify-center mt-8">
-          <Button className="bg-[#25d366]" variant="filled" onClick={onClickSchedule}>Agendar consulta</Button>
-        </div>
       </div>
     </div>
   )
