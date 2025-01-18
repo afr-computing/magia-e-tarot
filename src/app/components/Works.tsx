@@ -1,6 +1,9 @@
-import { Card, CardBody } from "@material-tailwind/react"
+import { Card, CardBody, CardHeader } from "@material-tailwind/react"
 import Image from "next/image";
 import WorkPic from '@/assets/works.jpeg';
+import AmarracaoAmorosa1 from '@/assets/amarracao-amorosa1.jpeg';
+import AmarracaoAmorosa2 from '@/assets/amarracao-amorosa2.jpeg';
+import AmarracaoAmorosa3 from '@/assets/amarracao-amorosa3.jpeg';
 
 const works = [
   {
@@ -12,7 +15,8 @@ Proteger o amor contra inveja, ciúme ou traição.
 
 Existe dedicação e empenho para harmonizar a energia do casal, a fim de promover uma conexão genuína tendo como pilar o respeito, amor e equilíbrio.
 
-Realizo este trabalho com respeito e dedicação independentemente da orientação sexual.`
+Realizo este trabalho com respeito e dedicação independentemente da orientação sexual.`,
+    src: [AmarracaoAmorosa1, AmarracaoAmorosa2, AmarracaoAmorosa3]
   },
   {
     id: 2,
@@ -26,7 +30,7 @@ Limpeza de ambientes para eliminar energias negativas da sua casa, escritório, 
     name: "Abertura de Caminhos",
     description: `Trabalho realizado para qualquer campo da sua vida seja financeiro, prosperidade, amor, trabalho, entre outros.
 
-Removo obstáculos e bloqueios, auxiliando a criar condições propícias para que alcance os seus objetivos.`
+Removo obstáculos e bloqueios, auxiliando a criar condições propícias para que alcance os seus objetivos.`,
   },
   {
     id: 5,
@@ -56,13 +60,24 @@ Afasta invejosos, pessoas que querem o seu mal, amantes ou pessoas interessadas 
 export const Works = () => {
   return (
     <div id="trabalhos" className="min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
-      <Image src={WorkPic} alt="work" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-center opacity-20" />
+      <Image src={WorkPic} alt="work" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-center opacity-30" />
       <div className="py-32 md:py-36 px-6 md:px-8">
         <h2 className=" text-center text-3xl md:text-5xl font-bold">Trabalhos</h2>
         <div className="grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
-          {works.map(({ id, name, description }) => {
+          {works.map(({ id, name, description, src }) => {
             return (
               <Card key={id}>
+                {src && (
+                  <div className="grid grid-cols-3">
+                    {src.map((img, index) => {
+                      return (
+                        <CardHeader key={index} className="max-w-48 aspect-square">
+                          <Image src={img} alt={`${name}-${index}`} />
+                        </CardHeader>
+                      )
+                    })}
+                  </div>
+                )}
                 <CardBody>
                   <h2 className="font-bold text-xl text-center mb-2">{name}</h2>
                   <p className="text-justify text-lg">
