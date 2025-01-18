@@ -25,7 +25,8 @@ export const HeaderMenu = () => {
           </a>
         ))}
       </div>
-      <div className={`fixed lg:hidden z-10 p-6 flex w-full justify-end ${isScroll ? 'bg-gray-900' : ''}`}>
+      <div className={`fixed lg:hidden z-10 p-6 flex w-full justify-between items-center ${isScroll ? 'bg-gray-900' : ''}`}>
+        <a href='#' className='text-xl font-bold'>Magia e Tarot</a>
         <button
           type="button"
           onClick={() => setMobileMenuOpen(true)}
