@@ -21,7 +21,7 @@ export const Hero = () => {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white lg:grid-cols-2 lg:flex lg:gap-x-10">
               <a href="#about">Sobre <span aria-hidden="true">&rarr;</span></a>
               <a href="#">Trabalhos <span aria-hidden="true">&rarr;</span></a>
-              <a href="#testemunhos">Testemunhos <span aria-hidden="true">&rarr;</span></a>
+{/*               <a href="#testemunhos">Testemunhos <span aria-hidden="true">&rarr;</span></a> */}
               <a href="instagram://user?username=loja_luzdaalma" onClick={() => window.open('https://www.instagram.com/loja_luzdaalma/', '_blank')}>Loja Luz da Alma <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
