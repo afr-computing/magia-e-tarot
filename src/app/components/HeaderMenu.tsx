@@ -6,7 +6,7 @@ import { Fragment, useState } from 'react';
 
 const navigation = [
   { name: 'Magia e Tarot', href: '#' },
-  { name: 'Sobre', href: '#about' },
+  { name: 'Sobre', href: '#sobre' },
   { name: 'Trabalhos', href: '#trabalhos' },
   /*   { name: 'Testemunhos', href: '#testemunhos' }, */
   { name: 'Loja Luz da Alma', href: '#', onClick: () => window.open('https://www.instagram.com/loja_luzdaalma/', '_blank') },
