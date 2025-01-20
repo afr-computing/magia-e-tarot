@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/magia-e-tarot.com",
+  basePath: "",
   images: {
     unoptimized: true,
   },
