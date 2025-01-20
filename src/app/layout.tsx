@@ -14,8 +14,15 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+const getUrl = () => {
+  if (process.env.NODE_ENV === 'development') {
+    return 'http://localhost:3000';
+  }
+  return 'https://magia-e-tarot.com';
+};
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getUrl()),
   title: "Magia e Tarot",
   description: 'Clareza para a sua alma, poder para a sua vida',
   openGraph: {

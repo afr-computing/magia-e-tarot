@@ -70,9 +70,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
-      - name: Set Environment Variable for Production
-        run: echo "NEXT_PUBLIC_SITE_URL=https://magia-e-tarot.com" >> $GITHUB_ENV
-  
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
