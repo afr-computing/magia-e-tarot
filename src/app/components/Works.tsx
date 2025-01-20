@@ -10,6 +10,8 @@ import Fertilidade1 from '@/assets/fertilidade1.jpeg';
 import Fertilidade2 from '@/assets/fertilidade2.jpeg';
 import Fertilidade3 from '@/assets/fertilidade3.jpeg';
 import QuebraMagia1 from '@/assets/quebra-magia1.jpeg';
+import QuebraMagia2 from '@/assets/quebra-magia2.jpeg';
+import QuebraMagia3 from '@/assets/quebra-magia3.jpeg';
 import LimpezaEspiritual1 from '@/assets/limpeza-espiritual1.jpeg';
 import LimpezaEspiritual2 from '@/assets/limpeza-espiritual2.jpeg';
 import LimpezaEspiritual3 from '@/assets/limpeza-espiritual3.jpeg';
@@ -67,7 +69,7 @@ Afasta invejosos, pessoas que querem o seu mal, amantes ou pessoas interessadas 
     id: 3,
     name: "Desfazer trabalhos de Magia Negra",
     description: `Se você for vítima de algum trabalho de magia ou praga espiritual entre em contacto comigo para desfazermos na hora.`,
-    src: [QuebraMagia1]
+    src: [QuebraMagia1, QuebraMagia2, QuebraMagia3]
   },
 ]
 
