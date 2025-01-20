@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Magia e Tarot",
   description: 'Clareza para a sua alma, poder para a sua vida',
   openGraph: {
-    images: [{ url: "/public/og-image.jpeg" }],
+    images: [{ url: "/og-image.jpeg" }],
     title: "Magia e Tarot",
     description: 'Clareza para a sua alma, poder para a sua vida',
     url: "https://magia-e-tarot.com",
