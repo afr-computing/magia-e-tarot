@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-
+import AboutPic from '@/assets/foto-perfil.jpeg';
 import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
 import { getConfig } from "@/app/config";
@@ -20,11 +20,12 @@ export const metadata: Metadata = {
   title: "Magia e Tarot",
   description: 'Clareza para a sua alma, poder para a sua vida',
   openGraph: {
+    images: [{ url: AboutPic.src }],
     title: "Magia e Tarot",
     description: 'Clareza para a sua alma, poder para a sua vida',
     url: "https://magia-e-tarot.com",
     type: "website",
-    siteName: "Magia e Tarot"
+    siteName: "Magia e Tarot",
   }
 
 };
