@@ -19,6 +19,9 @@ import Saude1 from '@/assets/saude1.jpeg';
 import Saude2 from '@/assets/saude2.jpeg';
 import Saude3 from '@/assets/saude3.jpeg';
 import CorteRival1 from '@/assets/corte-rival1.jpeg';
+import CorteRival2 from '@/assets/corte-rival2.jpeg';
+import CorteRival3 from '@/assets/corte-rival3.jpeg';
+
 import HeroImage from '@/assets/trabalho.jpeg';
 
 const works = [
@@ -63,7 +66,7 @@ Já ajudei vários casais a conquistarem este presente de Deus que é ter um beb
     name: "Corte de Rival",
     description: `Trabalho realizado para afastar rival de qualquer campo da sua vida.\n
 Afasta invejosos, pessoas que querem o seu mal, amantes ou pessoas interessadas no seu parceiro.`,
-    src: [CorteRival1]
+    src: [CorteRival1, CorteRival2, CorteRival3]
   },
   {
     id: 3,
