@@ -4,6 +4,7 @@ import "./globals.css";
 import { WhatsappFloatingbutton } from "@/app/components/WhatsappFloatingButton";
 import { getConfig } from "@/app/config";
 import { ScrollToTopFloatingButton } from "@/app/components/ScrollToTopFloatingButton";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,10 +49,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-      <noscript>
-        <iframe src={`https://www.googletagmanager.com/ns.html?id=${analyticsId}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
-        </iframe>
-      </noscript>
+        <GoogleTagManager gtmId={analyticsId}/>
+        <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${analyticsId}`}
+height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
         {children}
         <div className="fixed right-[24px] bottom-[16px] flex flex-col gap-[14px]">
           <ScrollToTopFloatingButton />
