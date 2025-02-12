@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader } from "@material-tailwind/react"
+import {CardBody, CardHeader } from "@material-tailwind/react"
 import Image from "next/image";
 import WorkPic from '@/assets/works.jpeg';
 import AmarracaoAmorosa1 from '@/assets/amarracao-amorosa1.jpeg';
@@ -23,6 +23,8 @@ import CorteRival2 from '@/assets/corte-rival2.jpeg';
 import CorteRival3 from '@/assets/corte-rival3.jpeg';
 
 import HeroImage from '@/assets/trabalho.jpeg';
+import { H1 } from "@/app/components/Animated/H1";
+import { Card } from "@/app/components/Animated/Card";
 
 const works = [
   {
@@ -95,27 +97,27 @@ function RenderParagraphs({ text }: { text: string }) {
 
 const CardList = () => {
   return (
-    <div className="grid grid-cols-1 gap-12 md:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 mt-16">
-      {works.map(({ id, name, description, src }) => {
+    <div className="grid grid-cols-1 gap-12 md:gap-6 md:gap-12 sm:grid-cols-2 md:grid-cols-3 mt-16">
+      {works.map(({ id, name, description, src }, index) => {
         return (
-          <Card key={id}>
-            {src && (
-              <div className="grid grid-cols-3">
-                {src.map((img, index) => {
-                  return (
-                    <CardHeader key={index} className="aspect-square mx-2">
-                      <Image src={img} alt={`${name}-${index}`} className="h-full object-cover object-top" />
-                    </CardHeader>
-                  )
-                })}
-              </div>
-            )}
-            <CardBody>
-              <h2 className="font-bold text-lg md:text-xl text-center mb-2">{name}</h2>
-              <div className="text-md md:text-lg">
-                <RenderParagraphs text={description} />
-              </div>
-            </CardBody>
+          <Card key={id} delay={0.1 * index}>
+              {src && (
+                <div className="grid grid-cols-3">
+                  {src.map((img, index) => {
+                    return (
+                      <CardHeader key={index} className="aspect-square mx-2">
+                        <Image src={img} alt={`${name}-${index}`} className="h-full object-cover object-top" />
+                      </CardHeader>
+                    )
+                  })}
+                </div>
+              )}
+              <CardBody>
+                <h2 className="font-bold text-lg md:text-xl text-center mb-2">{name}</h2>
+                <div className="text-md md:text-lg">
+                  <RenderParagraphs text={description} />
+                </div>
+              </CardBody>
           </Card>
         );
       })}
@@ -124,12 +126,11 @@ const CardList = () => {
 };
 
 export const Works = () => {
-
   return (
     <div id="trabalhos" className="min-h-[100vh] relative isolate overflow-hidden bg-gray-900">
       <Image src={HeroImage} alt="work" className="absolute inset-0 -z-10 size-full object-[-80px] object-cover lg:object-top  opacity-30" />
       <div className="py-32 md:py-36 px-6 md:px-8">
-        <h2 className=" text-center text-3xl md:text-5xl font-bold">Trabalhos</h2>
+        <H1 className=" text-center text-4xl md:text-5xl  font-bold">Trabalhos</H1>
         <CardList />
       </div>
     </div>

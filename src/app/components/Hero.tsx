@@ -2,6 +2,7 @@ import { MESSAGE, PHONE_NUMBER } from "@/app/constants";
 import { Button } from "@material-tailwind/react";
 import HeroImage from '@/assets/trabalho.jpeg';
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 export const Hero = () => {
   const onClickSchedule = () => {
@@ -14,14 +15,14 @@ export const Hero = () => {
       <div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h1 className="text-5xl font-semibold tracking-tight text-white lg:text-7xl text-center">Magia e Tarot</h1>
+            <motion.h1 className="text-5xl font-semibold tracking-tight text-white lg:text-7xl text-center">Magia e Tarot</motion.h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-300 lg:text-xl/8 text-center">Clareza para a sua alma, poder para a sua vida</p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white lg:grid-cols-2 lg:flex lg:gap-x-10">
               <a href="#sobre">Sobre <span aria-hidden="true">&rarr;</span></a>
               <a href="#trabalhos">Trabalhos <span aria-hidden="true">&rarr;</span></a>
-{/*               <a href="#testemunhos">Testemunhos <span aria-hidden="true">&rarr;</span></a> */}
+              {/*               <a href="#testemunhos">Testemunhos <span aria-hidden="true">&rarr;</span></a> */}
               <a href="instagram://user?username=loja_luzdaalma" onClick={() => window.open('https://www.instagram.com/loja_luzdaalma/', '_blank')}>Loja Luz da Alma <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
